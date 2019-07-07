@@ -1,4 +1,4 @@
-//console.log("Client side JS file is loaded");
+console.log("Client side JS file is loaded");
 
 //Client-side code for event listener on form
 const weatherForm = document.querySelector("form");
