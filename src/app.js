@@ -10,7 +10,7 @@ const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //Initiates hbs and views location
 app.set("view engine", "hbs");
@@ -107,11 +107,12 @@ app.get("/help/*", function(req, res) {
 app.get("*", function(req, res) {
   res.render("fourofour", {
     errorType: "404",
+    name: "Bryant Crowe",
     errorMessage: "Page not found."
   });
 });
 
 //Start up server
 app.listen(port, function() {
-  console.log("Server is up on port 3000.");
+  console.log("Server is up on port " + port);
 });
