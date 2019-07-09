@@ -6,7 +6,7 @@ const search = document.querySelector("input");
 const messageOne = document.querySelector("#message-1");
 const messageTwo = document.querySelector("#message-2");
 
-messageOne.textContent = "From JavaScript";
+//messageOne.textContent = "From JavaScript";
 
 //Adding event listener for form
 weatherForm.addEventListener("submit", e => {
