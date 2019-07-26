@@ -7,7 +7,7 @@ const forecast = function(latitude, longitude, callback) {
     "," +
     longitude;
 
-  request({ url, json: true }, function(error, body) {
+  request({ url: url, json: true }, function(error, response) {
     if (error) {
       callback("Unable to connect to weather service", undefined);
     } else if (response.body.error) {
@@ -20,9 +20,7 @@ const forecast = function(latitude, longitude, callback) {
           response.body.currently.temperature +
           " degrees out.  There is a " +
           response.body.currently.precipProbability +
-          " % chance of rain, and alert follows if available: " +
-          response.body.alerts.description +
-          "."
+          " % chance of rain."
       );
     }
   });
