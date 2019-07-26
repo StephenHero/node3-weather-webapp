@@ -17,11 +17,11 @@ const forecast = function(latitude, longitude, callback) {
         undefined,
         body.daily.data[0].summary +
           " It is currently " +
-          body.currently.temperature +
+          response.body.currently.temperature +
           " degrees out.  There is a " +
-          body.currently.precipProbability +
+          response.body.currently.precipProbability +
           " % chance of rain, and alert follows if available: " +
-          body.alerts.description +
+          response.body.alerts.description +
           "."
       );
     }
